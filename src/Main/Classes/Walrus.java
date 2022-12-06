@@ -13,6 +13,12 @@ public class Walrus extends Animal{
 
     @Override
     public String toString() {
-        return "Species: Walrus" + super.toString() + "\nDental Health: " + this.dentalHealth + "\n";
+
+        StringBuilder printCoordinates = new StringBuilder();
+        for (GPS coordinate : this.coordinates) {
+            printCoordinates.append(coordinate.latitude + ", " + coordinate.longitude + "\n");
+        }
+
+        return "Species: Walrus" + super.toString() + "\nDental Health: " + this.dentalHealth + "\n" + printCoordinates;
     }
 }

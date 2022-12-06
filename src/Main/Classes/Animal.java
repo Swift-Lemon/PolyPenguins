@@ -20,6 +20,8 @@ public abstract class Animal implements ILoggable {
     public ArrayList<GPS> getCoordinates() {return this.coordinates;}
 
     public String toString() {
+
+
         return "\nSex: " + this.sex + "\nWeight: " + this.weight;
     }
 

@@ -13,6 +13,12 @@ public class SeaLion extends Animal{
 
     @Override
     public String toString() {
-        return "Species: Sea Lion" + super.toString() + "\n# of Spots: " + this.spots + "\n";
+
+        StringBuilder printCoordinates = new StringBuilder();
+        for (GPS coordinate : this.coordinates) {
+            printCoordinates.append(coordinate.latitude + ", " + coordinate.longitude + "\n");
+        }
+
+        return "Species: Sea Lion" + super.toString() + "\n# of Spots: " + this.spots + "\n" + printCoordinates;
     }
 }

@@ -13,6 +13,12 @@ public class Penguin extends Animal {
 
     @Override
     public String toString() {
-        return "Species: Penguin" + super.toString() + "\nBlood Pressure: " + this.bloodPressure + "\n";
+
+        StringBuilder printCoordinates = new StringBuilder();
+        for (GPS coordinate : this.coordinates) {
+            printCoordinates.append(coordinate.latitude + ", " + coordinate.longitude + "\n");
+        }
+
+        return "Species: Penguin" + super.toString() + "\nBlood Pressure: " + this.bloodPressure + "\n" + printCoordinates;
     }
 }
